@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, Github, Filter } from "lucide-react";
+import { Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,8 +15,6 @@ const Projects = () => {
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
       category: ["Full Stack", "React", "Node.js"],
       image: "🛒",
-      github: "https://github.com/shubhammishra/ecommerce-platform",
-      demo: "https://demo-ecommerce.shubhammishra.dev",
       featured: true
     },
     {
@@ -26,8 +24,6 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
       category: ["Full Stack", "React", "TypeScript"],
       image: "📝",
-      github: "https://github.com/shubhammishra/task-manager",
-      demo: "https://tasks.shubhammishra.dev",
       featured: true
     },
     {
@@ -37,8 +33,6 @@ const Projects = () => {
       tech: ["React", "TypeScript", "OpenWeather API"],
       category: ["React", "Frontend"],
       image: "🌤️",
-      github: "https://github.com/shubhammishra/weather-dashboard",
-      demo: "https://weather.shubhammishra.dev",
       featured: false
     },
     {
@@ -48,8 +42,6 @@ const Projects = () => {
       tech: ["Next.js", "Node.js", "MongoDB", "MDX"],
       category: ["Full Stack", "Next.js", "Node.js"],
       image: "📖",
-      github: "https://github.com/shubhammishra/blog-cms",
-      demo: "https://cms.shubhammishra.dev",
       featured: true
     },
     {
@@ -59,8 +51,6 @@ const Projects = () => {
       tech: ["React", "Socket.io", "Node.js", "Redis"],
       category: ["Full Stack", "React", "Node.js"],
       image: "💬",
-      github: "https://github.com/shubhammishra/chat-app",
-      demo: "https://chat.shubhammishra.dev",
       featured: false
     },
     {
@@ -70,8 +60,6 @@ const Projects = () => {
       tech: ["Python", "Django", "Chart.js", "PostgreSQL"],
       category: ["Python", "Full Stack"],
       image: "📊",
-      github: "https://github.com/shubhammishra/portfolio-analytics",
-      demo: "https://analytics.shubhammishra.dev",
       featured: false
     },
     {
@@ -81,8 +69,6 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Recipe API"],
       category: ["React", "Frontend"],
       image: "👨‍🍳",
-      github: "https://github.com/shubhammishra/recipe-finder",
-      demo: "https://recipes.shubhammishra.dev",
       featured: false
     },
     {
@@ -92,8 +78,6 @@ const Projects = () => {
       tech: ["React", "Node.js", "MongoDB", "Chart.js"],
       category: ["Full Stack", "React", "Node.js"],
       image: "💰",
-      github: "https://github.com/shubhammishra/expense-tracker",
-      demo: "https://expenses.shubhammishra.dev",
       featured: true
     }
   ];
@@ -145,21 +129,6 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
-                
-                <div className="flex gap-3">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </a>
-                  </Button>
-                </div>
               </Card>
             ))}
           </div>
@@ -209,21 +178,6 @@ const Projects = () => {
                       +{project.tech.length - 3}
                     </Badge>
                   )}
-                </div>
-                
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" asChild className="flex-1">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-3 w-3 mr-1" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button size="sm" asChild className="flex-1">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-3 w-3 mr-1" />
-                      Demo
-                    </a>
-                  </Button>
                 </div>
               </Card>
             ))}
